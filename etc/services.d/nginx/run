@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+variables='${DOCUMENT_ROOT}'
+envsubst "${variables}" < default.tmpl > /etc/nginx/sites-available/default
+
+exec nginx

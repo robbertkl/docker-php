@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+variables='${PHP_MEMORY_LIMIT}:${PHP_ERROR_REPORTING}:${TZ}'
+envsubst "${variables}" < php-cli.ini.tmpl > /etc/php5/cli/php.ini
+envsubst "${variables}" < php-fpm.ini.tmpl > /etc/php5/fpm/php.ini
+
+exec php5-fpm
