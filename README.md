@@ -5,11 +5,11 @@
 Docker container running PHP-FPM with NGINX:
 
 * Meant to be run behind a reverse proxy doing SSL and/or virtual hosts (for example the awesome [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy))
-* Either run it directly with a mounted volume or extend it into an image with your code included.
+* Either run it directly with a mounted volume or extend it into an image with your code included
 * Logs access to `stdout`, errors to `stderr` (so it shows up in `docker logs`)
 * Contains `composer` to install your app dependencies
 * Exposes port 80 (HTTP)
-* By default, servers a `phpinfo()` page
+* By default, serves a `phpinfo()` page
 
 ## Usage
 
@@ -28,7 +28,6 @@ COPY <my code> .
 RUN composer install --no-dev
 
 ...
-
 ```
 
 ## Environment variables
