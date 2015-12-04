@@ -19,6 +19,9 @@ RUN php -r "readfile('https://getcomposer.org/installer');" | php \
 COPY etc /etc
 RUN rm -rf /etc/php5/fpm/pool.d
 
+# Development workaround (boot2docker)
+RUN usermod -u 1000 -G staff www-data
+
 # Overridable environment variables
 ENV DOCUMENT_ROOT=/var/www \
     PHP_MEMORY_LIMIT=128M \
