@@ -6,6 +6,7 @@ RUN cleaninstall \
     nginx \
     php5-curl \
     php5-fpm \
+    php5-gd \
     php5-mcrypt \
     php5-mysql \
     php5-sqlite \
