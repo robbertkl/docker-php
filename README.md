@@ -24,8 +24,9 @@ Or extend it:
 ```
 FROM robbertkl/php
 
-COPY <my code> .
+COPY composer.json composer.lock ./
 RUN composer install --no-dev
+COPY . .
 
 ...
 ```
